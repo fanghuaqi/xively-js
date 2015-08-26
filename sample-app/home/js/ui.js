@@ -31,7 +31,7 @@ var ui      = {};
         methods.on();
       }
       else {
-        methods.off();        
+        methods.off();
       }
     };
 
@@ -41,6 +41,7 @@ var ui      = {};
       auto      : methods.auto
     };
   })();
+
 
   // UI TV
 

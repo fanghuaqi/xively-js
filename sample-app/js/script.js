@@ -4,7 +4,6 @@
   var feedID = 1125809548;
 
   // SET API KEY
-  
   xively.setKey( "1utiYwVwm7QH1KCQowljICDEvikbpbCEUs0mDktH4baqg4Va" ); // do not use this one, create your own at xively.com
 
   // get all feed data in one shot
