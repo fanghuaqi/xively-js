@@ -13,9 +13,18 @@ var ui      = {};
     methods.off = function ( el, notrigger ) {
       var $el       = $(el),
           $checkbox = $($el.attr("data-toggle"));
+
+      if( $el.attr('data-toggle') == '.js-bedroom_light') {
+        $('#bedroom_light_label').removeClass('input-label-highlight').addClass('input-label');
+      } else if ($el.attr('data-toggle') == '.js-parlor_light'){
+        $('#parlor_light_label').removeClass('input-label-highlight').addClass('input-label');
+      }
       if ( $el.hasClass("js-toggle-off") ) { return false; }
       $el.addClass("js-toggle-off");
       $checkbox.prop("checked",false);
+
+      
+
       if ( !notrigger ) { $checkbox.trigger("change"); }
     };
 
@@ -23,10 +32,16 @@ var ui      = {};
     methods.on = function ( el, notrigger ) {
       var $el       = $(el),
           $checkbox = $($el.attr("data-toggle"));
+      if( $el.attr('data-toggle') == '.js-bedroom_light') {
+        $('#bedroom_light_label').removeClass('input-label').addClass('input-label-highlight')
+      } else if ($el.attr('data-toggle') == '.js-parlor_light'){
+        $('#parlor_light_label').removeClass('input-label').addClass('input-label-highlight')
+
+      }
       if ( !$el.hasClass("js-toggle-off") ) { return false; }
       $el.removeClass("js-toggle-off");
       $checkbox.prop("checked",true);
-      if ( !notrigger ) { $checkbox.trigger("change"); }
+            if ( !notrigger ) { $checkbox.trigger("change"); }
     };
 
     // figure it out

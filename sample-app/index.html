@@ -20,6 +20,22 @@
 
   <!-- modernizr -->
   <script type="text/javascript" src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <style>
+            /*.input-label-highlight {
+              float: left;
+              font-size: 50px;
+              font-family: "bebas-neue", "helvetica neue", helvetica, arial, sans-serif;
+              text-shadow: 0 1px 0 #101010;
+              position: relative;
+              top: 10px;
+              margin-right: .5em;
+              font-size: 40px;
+              color: #fff;
+              text-shadow: 0 -1px 0 #101010,
+                           0 1px 0 #505050;
+            }
+*/  </style>
+
 </head>
 <body>
 
@@ -40,7 +56,7 @@
           <fieldset>
 
             <div class="field clearfix">
-              <label class="input-label icon-lamp" for="bedroom_light">Bedroom</label>
+              <label id="bedroom_light_label" class="input-label icon-lamp" for="bedroom_light">Bedroom</label>
               <input id="bedroom_light" class="input js-bedroom_light hidden" type="checkbox">
               <div class="js-bedroom_light-toggle ui-toggle" data-toggle=".js-bedroom_light">
                 <span class="ui-toggle-slide clearfix">
@@ -52,7 +68,7 @@
             </div>
 
             <div class="field clearfix">
-              <label class="input-label icon-lamp" for="parlor_light">Parlor</label>
+              <label id="parlor_light_label" class="input-label icon-lamp" for="parlor_light">Parlor</label>
               <input id="parlor_light" class="input js-parlor_light hidden" type="checkbox">
               <div class="js-parlor_light-toggle ui-toggle" data-toggle=".js-parlor_light">
                 <span class="ui-toggle-slide clearfix">
@@ -86,7 +102,7 @@
   </div>
 
   <!-- jquery from CDN - with fallback to local -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
 
   <!-- xivelyJS from CDN - with fallback to local -->
